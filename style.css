@@ -50,11 +50,6 @@ img {
     border: 0.2px solid #00FF88;
 }
 
-/* body {
-    width: 100%;
-    max-width: 1600px;
-    margin: 0 auto;
-} */
 
 header {
     display: none;
@@ -206,14 +201,173 @@ header nav .btn i {
 
 }
 
+/* ********************************************************************************
+            Podcast start
+***********************************************************************************/
+.podcast {
+    overflow: hidden;
+    width: 100%;
+    max-width: 1600px;
+    display: flex;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 120px 200px;
+    background-color: #1A0B2E;
+    gap: 120px;
+}
 
+.podcast .podcast_top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 40px;
+}
 
+.podcast .podcast_top h1 {
+    font-size: 48px;
+    color: #ffffff;
+    font-weight: bold;
+}
 
+.podcast .podcast_top .podcast_content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 30px;
+}
 
+.podcast .podcast_top .podcast_content .podcast_video {
+    overflow: hidden;
+    width: 100%;
+    max-width: 380px;
+    height: 440px;
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    flex-direction: column;
+    border-top-right-radius: 25px;
+    border-top-left-radius: 25px;
+    background-color: #250D44;
+}
 
+.podcast .podcast_top .podcast_content .podcast_video iframe {
+    border: none;
+    width: 100%;
+}
 
+.podcast .podcast_top .podcast_content .podcast_video h2 {
+    padding: 24px 24px 12px 24px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #FAFAFA;
+}
 
+.podcast .podcast_top .podcast_content .podcast_video p {
+    opacity: 0.6;
+    font-style: normal;
+    padding: 12px 24px 12px 24px;
+    text-align: left;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    color: #FAFAFA;
+}
 
+.podcast .podcast_top .podcast_content .podcast_video .time {
+    color: #00FF88;
+    text-align: left;
+}
+
+/* <i class="fa-solid fa-play"></i> */
+.podcast .podcast_top .podcast_content .podcast_video .time .fa-clock {
+    margin-right: 6px;
+    text-align: left;
+}
+
+.podcast .podcast_bottom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.podcast .podcast_bottom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.podcast .podcast_bottom .podcast_btt_content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    background-color: rgba(53, 17, 101, 0.4);
+    padding: 40px;
+    border-radius: 40px;
+}
+
+.podcast .podcast_bottom .podcast_btt_content .podcast_image img {
+    width: 100%;
+    height: auto;
+}
+
+.podcast .podcast_bottom .podcast_btt_content .podcast_info h2 {
+    margin-bottom: 1rem;
+    font-size: 3rem;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.podcast .podcast_bottom .podcast_btt_content .podcast_info p {
+    opacity: 0.6;
+    font-size: 1rem;
+    line-height: 24px;
+    color: #ffffff;
+    font-weight: 400;
+    margin-bottom: 1rem;
+}
+
+.podcast .podcast_bottom .podcast_btt_content .podcast_info ul {
+    display: flex;
+    align-items: center;
+    /* color: #ffffff; */
+    text-align: left;
+    font-size: 1rem;
+    gap: 5px;
+    background: linear-gradient(to top right, rgba(247, 233, 63, 1), rgba(251, 9, 180, 1), rgba(145, 0, 248, 1));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin-bottom: 1rem;
+}
+
+.icon-container {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    /* color: white; */
+    border: 1px solid rgba(83, 60, 114, 1);
+}
+
+.podcast .podcast_bottom h2 {
+    margin-bottom: 40px;
+    color: #FFFFFF;
+    font-style: Bold;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 58px;
+}
 
 /* ********************************************************************************
             footer start
@@ -309,19 +463,116 @@ header nav .btn i {
     .footer .footer_content h1 {
         margin: 0 90.5px 0 90.5px;
         font-size: 4rem;
-        margin-bottom: 24px;
+
     }
 
     .footer .footer_content ul {
         font-size: 24px;
         padding: 0 72px 0 72px;
-        gap: 30px;
+        gap: 5px;
     }
 
 
     .footer .footer_content ul li {
         flex-grow: 0;
     }
+
+    /***************************************************************************************
+    ****************************************************************************************
+     Podcust
+     ************************************************************************************* */
+
+
+
+
+    .podcast {
+
+        padding: 40px 20px;
+        gap: 30px;
+
+    }
+
+    .podcast .podcast_top {
+        padding: 0;
+        gap: 16px;
+    }
+
+    .podcast .podcast_top h1 {
+        font-size: 2rem;
+    }
+
+    .podcast .podcast_top .podcast_content {
+        /* flex-direction: row; */
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+
+    .podcast .podcast_top .podcast_content .podcast_video {
+        max-width: 100%;
+    }
+
+    .podcast .podcast_top .podcast_content .podcast_video h2 {
+        font-size: 20px;
+    }
+
+    .podcast .podcast_top .podcast_content .podcast_video p {
+        font-size: 16px;
+    }
+
+    .podcast .podcast_top .podcast_content .podcast_video .time {
+        color: #00FF88;
+        text-align: left;
+    }
+
+    /* <i class="fa-solid fa-play"></i> */
+    .podcast .podcast_top .podcast_content .podcast_video .time .fa-clock {
+        margin-right: 6px;
+        text-align: left;
+    }
+
+    .podcast .podcast_bottom {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .podcast .podcast_bottom {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .podcast .podcast_bottom .podcast_btt_content {
+        flex-direction: column;
+        gap: 16px;
+        padding: 20px;
+
+    }
+
+    .podcast .podcast_bottom h2 {
+        margin-bottom: 25px;
+
+    }
+
+
+
+    .podcast .podcast_bottom .podcast_btt_content .podcast_info h2 {
+        margin-bottom: 0.5rem;
+        font-size: 2rem;
+        text-align: center;
+    }
+
+
+
+    .podcast .podcast_bottom .podcast_btt_content .podcast_info ul {
+        justify-content: center;
+
+    }
+
+
+
 
 
 }
