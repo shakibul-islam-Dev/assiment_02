@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    list-style: none;
+}
+
+/* common */
+.btn {
+    padding: 12px 16px;
+    background: linear-gradient(to right, #F7E93F 0%, #FB09B4 51%, #9100F8 100%);
+    border-radius: 10000px;
+    border: none;
+    font-size: 16px;
+    font-weight: 600;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
+    background-color: #1A0B2E;
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 24px 200px;
+    gap: 314px;
+    border-bottom: 0.5px solid #321458;
+
+}
+
+header nav .logo {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+header nav .logo li {
+    color: #ffffff;
+}
+
+
+header nav .logo li .gradient {
+    background: linear-gradient(to right, #F7E93F 0%, #FB09B4 51%, #9100F8 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+}
+
+header nav .menu {
+    font-size: 16px;
+    color: #ffffff;
+    line-height: 150%;
+}
+
+header nav .menu ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+}
+
+header nav .btn {
+    padding: 12px 16px;
+    background: linear-gradient(to right, #F7E93F 0%, #FB09B4 51%, #9100F8 100%);
+    border-radius: 10000px;
+    border: none;
+    font-size: 16px;
+    font-weight: 600;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+header nav .btn i {
+    margin-left: 4px;
+}
+
+/* Banner start */
+.banner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(./assets/hero-bg.png);
+    background-size: cover;
+    width: 100%;
+    max-width: 1600px;
+    height: 800px;
+    padding: 100px 525px;
+}
+
+.banner .banner_content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0 auto;
+    border: 2px solid white;
+    position: relative;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ********************************************************************************
+            MOBILE  Layout
+***********************************************************************************/
+@media screen and (max-width:576px) {}
