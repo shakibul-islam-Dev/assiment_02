@@ -41,25 +41,49 @@ img {
     font-weight: 600;
     color: #ffffff;
     cursor: pointer;
-    transition: all ease;
+
 }
 
 .btn:hover {
-    color: #00FF88;
+    transition: all 0.2s ease;
+    box-shadow: 0 0 4px 1px #00FF88;
     background: transparent;
-    border: 0.2px solid #00FF88;
+    color: #00FF88;
 }
 
+header nav .logo li .gradient {
+    background: linear-gradient(to right, #F7E93F 0%, #FB09B4 51%, #9100F8 100%);
+    width: 300%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    animation: animate 2s linear infinite;
+}
+
+@keyframes animate {
+    0% {
+        background-size: 0%;
+    }
+
+    50% {
+        background-size: 100%;
+    }
+
+    100% {
+        background-size: 200%;
+    }
+}
 
 header {
-    display: none;
+    width: 100%;
+    max-width: 1600px;
+    padding: 24px 200px;
+    margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
-    width: 100%;
-    max-width: 1600px;
-    margin: 0 auto;
+    /* flex-direction: column; */
     background-color: #1A0B2E;
     border-bottom: 0.5px solid #321458;
 }
@@ -67,13 +91,11 @@ header {
 
 
 header nav {
+    width: 75%;
+    max-width: 1200px;
     display: flex;
     align-items: center;
-    justify-content: center;
-    margin: 0 auto;
-    padding: 24px 200px;
-    gap: 314px;
-
+    justify-content: space-between;
 
 }
 
@@ -87,13 +109,13 @@ header nav .logo li {
 }
 
 
-header nav .logo li .gradient {
+/* header nav .logo li .gradient {
     background: linear-gradient(to right, #F7E93F 0%, #FB09B4 51%, #9100F8 100%);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
     color: transparent;
-}
+} */
 
 header nav .menu {
     font-size: 16px;
@@ -106,6 +128,7 @@ header nav .menu ul {
     align-items: center;
     justify-content: center;
     gap: 32px;
+    cursor: pointer;
 }
 
 header nav .btn {
@@ -125,8 +148,8 @@ header nav .btn i {
 
 /* Banner start */
 .banner {
-    display: none;
-    /* display: flex; */
+    margin: 0 auto;
+    display: flex;
     align-items: center;
     justify-content: center;
     background-image: url(./assets/hero-bg.png);
@@ -165,6 +188,7 @@ header nav .btn i {
     width: 100%;
     max-width: 1600px;
     background: #1A0B2E;
+    position: relative;
 }
 
 .about .about_content {
@@ -174,6 +198,18 @@ header nav .btn i {
     flex-direction: column;
     text-align: center;
     margin-bottom: 80px;
+
+}
+
+.about_line {
+    z-index: 1000;
+    position: absolute;
+    top: 58%;
+    left: 20%;
+    width: 60%;
+    height: 2px;
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
 }
 
 .about .about_content .about_uper {
@@ -196,14 +232,22 @@ header nav .btn i {
     opacity: 0.8;
 }
 
-.about_rating {
+.about .about_content .about_rating {
     margin-top: 80px;
     padding: 0 20px;
     display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 80px;
 }
 
 .about_rating .rating_content {
     padding: 0 20px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-direction: column;
 }
 
 .about_rating .rating_content h1 {
@@ -570,6 +614,70 @@ header nav .btn i {
             MOBILE  Layout
 ***********************************************************************************/
 @media screen and (max-width:576px) {
+
+    .about {
+        padding: 20px 10px 0 10px;
+    }
+
+    .about .about_content {
+        margin-bottom: 40px;
+    }
+
+    .about_line {
+        top: 48%;
+        left: 10%;
+        width: 80%;
+        height: 2px;
+
+    }
+
+    .about .about_content .about_uper {
+        margin-bottom: 20px;
+        padding: 0 20px 0;
+    }
+
+    .about .about_content .about_uper h1 {
+        font-size: 32px;
+        color: #ffffff;
+        margin-bottom: 4px;
+    }
+
+    .about .about_content .about_uper p {
+        font-size: 16px;
+        color: #ffffff;
+        line-height: 20px;
+    }
+
+    .about_rating {
+        margin-top: 20px;
+        padding: 0 20px;
+        display: flex;
+        gap: 10px;
+    }
+
+    .about_rating .rating_content {
+        padding: 0 20px;
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        flex-direction: column;
+
+    }
+
+    .about_rating .rating_content h1 {
+        color: #00FF88;
+        font-weight: bold;
+        font-size: 40px;
+    }
+
+    .about_rating .rating_content p {
+        color: #ffffff;
+        opacity: 0.8;
+        font-size: 16px;
+        line-height: 20px;
+        font-weight: 300;
+
+    }
 
     /***************************************************************************************
      info
