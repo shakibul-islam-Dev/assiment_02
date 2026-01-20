@@ -157,7 +157,7 @@ header nav .btn i {
 ***********************************************************************************/
 
 .about {
-    display: none;
+    margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -173,16 +173,12 @@ header nav .btn i {
     justify-content: center;
     flex-direction: column;
     text-align: center;
+    margin-bottom: 80px;
 }
 
-.about .about_content {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    text-align: center;
-    width: 100%;
-    max-width: 1200px;
+.about .about_content .about_uper {
+    margin-bottom: 80px;
+    padding: 0 200px 0;
 }
 
 .about .about_content .about_uper h1 {
@@ -194,10 +190,34 @@ header nav .btn i {
 
 .about .about_content .about_uper p {
     font-size: 16px;
-    font-weight: 400;
+    font-weight: 300;
     color: #ffffff;
     line-height: 20px;
+    opacity: 0.8;
+}
 
+.about_rating {
+    margin-top: 80px;
+    padding: 0 20px;
+    display: flex;
+}
+
+.about_rating .rating_content {
+    padding: 0 20px;
+}
+
+.about_rating .rating_content h1 {
+    color: #00FF88;
+    font-weight: bold;
+    font-size: 48px;
+}
+
+.about_rating .rating_content p {
+    color: #ffffff;
+    opacity: 0.8;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 300;
 
 }
 
@@ -215,7 +235,7 @@ header nav .btn i {
     flex-direction: column;
     padding: 120px 200px;
     background-color: #1A0B2E;
-    gap: 120px;
+    gap: 60px;
 }
 
 .podcast .podcast_top {
@@ -370,6 +390,106 @@ header nav .btn i {
 }
 
 /* ********************************************************************************
+            Grid-Area
+***********************************************************************************/
+
+.info {
+    width: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
+    background: #230E3D;
+    color: #ffffff;
+    padding: 120px 200px;
+}
+
+.info h1 {
+    font-size: 48px;
+    font-weight: bold;
+    padding-top: 120px 200px;
+    text-align: center;
+    margin-bottom: 40px;
+
+}
+
+.info .grid {
+    max-width: 1200px;
+    border-radius: 20px;
+    display: grid;
+    align-items: stretch;
+    justify-content: center;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: auto auto auto;
+    /* height: 273px; */
+    gap: 20px;
+}
+
+.big {
+    grid-column: 1 / span 3;
+    grid-row: 1 /span 2;
+}
+
+.big-vertical {
+    grid-column: 4 / span 6;
+}
+
+.big-left {
+    grid-column: 1 / span 4;
+}
+
+.small {
+    grid-column: 5 / span 6;
+}
+
+.big {
+    padding: 100px 40px;
+}
+
+.big-vertical {
+    padding: 40px;
+}
+
+.big-left {
+    padding: 40px;
+}
+
+.small {
+    padding: 40px 0 40px 40px;
+}
+
+*/ .info .grid h3 {
+    margin-top: 16px;
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.info .grid p {
+    margin-top: 16px;
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 24px;
+    opacity: 0.6;
+}
+
+.info .grid>div {
+    display: block;
+    padding-left: 40px;
+    text-align: left;
+    border-radius: 20px;
+    background: #351165;
+
+}
+
+
+
+
+
+
+
+
+
+
+/* ********************************************************************************
             footer start
 ***********************************************************************************/
 
@@ -450,43 +570,46 @@ header nav .btn i {
             MOBILE  Layout
 ***********************************************************************************/
 @media screen and (max-width:576px) {
-    .footer {
-        width: 100%;
+
+    /***************************************************************************************
+     info
+     ************************************************************************************* */
+    .info {
         max-width: 576px;
+
+        color: #ffffff;
+        padding: 20px 30px;
     }
 
-    .footer .footer_content {
-        /* margin: 0 auto; */
-        padding: 40px 20px;
-    }
-
-    .footer .footer_content h1 {
-        margin: 0 90.5px 0 90.5px;
-        font-size: 4rem;
+    .info h1 {
+        font-size: 32px;
+        padding-top: 20px;
+        ;
+        margin-bottom: 20px;
 
     }
 
-    .footer .footer_content ul {
-        font-size: 24px;
-        padding: 0 72px 0 72px;
-        gap: 5px;
+    .info .grid {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+
     }
 
-
-    .footer .footer_content ul li {
-        flex-grow: 0;
+    .big,
+    .big-vertical,
+    .big-left,
+    .small {
+        padding: 20px;
     }
 
     /***************************************************************************************
-    ****************************************************************************************
      Podcust
      ************************************************************************************* */
 
-
-
-
     .podcast {
-
         padding: 40px 20px;
         gap: 30px;
 
@@ -570,6 +693,41 @@ header nav .btn i {
         justify-content: center;
 
     }
+
+    /***************************************************************************************
+     footer
+     ************************************************************************************* */
+
+    .footer {
+        width: 100%;
+        max-width: 576px;
+    }
+
+    .footer .footer_content {
+        /* margin: 0 auto; */
+        padding: 40px 20px;
+    }
+
+    .footer .footer_content h1 {
+        margin: 0 90.5px 0 90.5px;
+        font-size: 4rem;
+
+    }
+
+    .footer .footer_content ul {
+        font-size: 24px;
+        padding: 0 72px 0 72px;
+        gap: 5px;
+    }
+
+
+    .footer .footer_content ul li {
+        flex-grow: 0;
+    }
+
+    /***************************************************************************************
+     Podcust
+     ************************************************************************************* */
 
 
 
