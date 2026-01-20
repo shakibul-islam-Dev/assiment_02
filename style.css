@@ -171,7 +171,7 @@ header nav .btn i {
     border: none;
     color: #1A0B2E;
     font-size: 18px;
-    font-weight: 600;
+    font-weight: 500;
 }
 
 @keyframes borderAnmi {
@@ -376,6 +376,20 @@ header nav .btn i {
     gap: 30px;
 }
 
+.podcast_video {
+    position: relative;
+}
+
+.play-btn {
+    background: linear-gradient(to right, #F7E93F 0%, #FB09B4 51%, #9100F8 100%);
+    top: 15%;
+    left: 39%;
+    border-radius: 50%;
+    color: #FAFAFA;
+    position: absolute;
+    font-size: clamp(3rem, 5vw, 4rem);
+}
+
 .podcast .podcast_top .podcast_content .podcast_video {
     overflow: hidden;
     width: 100%;
@@ -451,6 +465,15 @@ header nav .btn i {
 .podcast .podcast_bottom .podcast_btt_content .podcast_image img {
     width: 100%;
     height: auto;
+}
+
+.play-btn {
+    top: 15%;
+    left: 39%;
+    border-radius: 50%;
+    color: #FAFAFA;
+    position: absolute;
+    font-size: clamp(3rem, 5vw, 4rem);
 }
 
 .podcast .podcast_bottom .podcast_btt_content .podcast_info h2 {
@@ -834,6 +857,16 @@ header nav .btn i {
         line-height: 20px;
         font-weight: 300;
 
+    }
+
+    .play-btn {
+        position: absolute;
+        top: 18%;
+        left: 42%;
+        border-radius: 50%;
+        color: #FAFAFA;
+
+        font-size: 5rem;
     }
 
     /***************************************************************************************
