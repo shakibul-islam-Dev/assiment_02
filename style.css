@@ -17,13 +17,6 @@
     list-style: none;
 }
 
-/* 
-img {
-    width: 100%;
-    height: auto;
-} */
-
-
 .inter {
     font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
@@ -51,30 +44,6 @@ img {
     color: #00FF88;
 }
 
-header nav .logo li .gradient {
-    background: linear-gradient(to right, #F7E93F 0%, #FB09B4 51%, #9100F8 100%);
-    width: 300%;
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    color: transparent;
-    animation: animate 2s linear infinite;
-}
-
-@keyframes animate {
-    0% {
-        background-size: 0%;
-    }
-
-    50% {
-        background-size: 100%;
-    }
-
-    100% {
-        background-size: 200%;
-    }
-}
-
 header {
     width: 100%;
     max-width: 1600px;
@@ -89,6 +58,9 @@ header {
 }
 
 
+.menu-bar {
+    visibility: hidden;
+}
 
 header nav {
     width: 75%;
@@ -109,13 +81,13 @@ header nav .logo li {
 }
 
 
-/* header nav .logo li .gradient {
+header nav .logo li .gradient {
     background: linear-gradient(to right, #F7E93F 0%, #FB09B4 51%, #9100F8 100%);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
     color: transparent;
-} */
+}
 
 header nav .menu {
     font-size: 16px;
@@ -153,27 +125,126 @@ header nav .btn i {
     align-items: center;
     justify-content: center;
     background-image: url(./assets/hero-bg.png);
+    background-repeat: no-repeat;
+    background-position: center;
     background-size: cover;
     width: 100%;
     max-width: 1600px;
     height: 800px;
-    padding: 100px 525px;
+    padding: 101px 525px;
 }
 
 .banner .banner_content {
+    text-align: center;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+}
 
-    border: 2px solid white;
+.banner .banner_content .banner_icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    width: 380px;
+    height: 380px;
+    border-radius: 50%;
+    background: linear-gradient(to right, #F7E93F 0%, #FB09B4 51%, #9100F8 100%);
+    margin-bottom: 40px;
+    border: 10px solid #2A186C;
+    box-shadow: 0 0 100px #2A186C;
+    animation: borderAnmi 10s ease-in infinite;
     position: relative;
 }
 
-.banner .banner_content img {
-    width: 100%;
+.new {
+    z-index: 10;
+    top: 5px;
+    right: 10px;
+    position: absolute;
+    background-color: #00FF88;
+    border-radius: 50px;
+    box-shadow: 0px 0px 8px #00FF88;
+    padding: 16px;
+    outline: none;
+    border: none;
+    color: #1A0B2E;
+    font-size: 18px;
+    font-weight: 600;
 }
 
+@keyframes borderAnmi {
+    0% {
+        box-shadow: 0 0 10px #2A186C;
+
+    }
+
+    50% {
+        box-shadow: 0 0 50px #2A186C;
+
+    }
+
+    100% {
+        box-shadow: 0 0 100px #2A186C;
+
+    }
+
+}
+
+.banner .banner_content .banner_icon img {
+    width: 100%;
+    max-width: 150px;
+    height: auto;
+}
+
+.banner .banner_content .banner_icon img {
+    width: 100%;
+    max-width: 150px;
+    height: auto;
+    animation: micScale 5s ease-in-out infinite;
+}
+
+@keyframes micScale {
+    0% {
+        width: 100%;
+        transform: scale(1);
+        transform: translateX(6px)
+    }
+
+    50% {
+        width: 90%;
+        transform: scale(1.09);
+        transform: translateX(-6px)
+    }
+
+    100% {
+        width: 100%;
+        transform: scale(1);
+        transform: translateX(6px)
+    }
+}
+
+.banner .banner_content .banner_text h1 {
+    text-align: center;
+    font-size: 60px;
+    font-weight: 800;
+    color: #ffffff;
+}
+
+.banner .banner_content .banner_text p {
+    font-size: 16px;
+    color: #ffffff;
+
+}
+
+.banner .banner_content .banner_text .banner_btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 24px;
+}
 
 /* ********************************************************************************
             About Rating
@@ -614,6 +685,92 @@ header nav .btn i {
             MOBILE  Layout
 ***********************************************************************************/
 @media screen and (max-width:576px) {
+    header {
+        display: none;
+        width: 100%;
+        max-width: 575px;
+        padding: 10px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /* flex-direction: column; */
+        background-color: #1A0B2E;
+    }
+
+
+    .menu-bar {
+        font-size: 28px;
+        color: #ffffff;
+        visibility: visible;
+    }
+
+    header nav {
+        padding: 20px;
+        width: 100%;
+        max-width: 576px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+    }
+
+    header nav .logo {
+        font-size: 32px;
+        font-weight: bold;
+    }
+
+
+
+    header nav .menu {
+        display: none;
+    }
+
+
+
+    header nav .btn {
+        display: none;
+    }
+
+    /* bannr start */
+    .banner {
+        width: 100%;
+        height: auto;
+        max-width: 576px;
+        padding: 40px 20px;
+    }
+
+
+    .banner .banner_content .banner_icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 70px auto;
+        width: 270px;
+        height: 270px;
+        border-radius: 50%;
+        margin-bottom: 40px;
+
+    }
+
+    .banner .banner_content .banner_icon img {
+        width: 100%;
+        max-width: 75px;
+        height: auto;
+    }
+
+
+    .banner .banner_content .banner_text h1 {
+        font-size: 40px;
+
+    }
+
+    .banner .banner_content .banner_text p {
+        opacity: 0.6;
+
+    }
+
+
 
     .about {
         padding: 20px 10px 0 10px;
